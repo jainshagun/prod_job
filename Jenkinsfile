@@ -7,7 +7,6 @@ pipeline {
                                project: [key: 'GAR'],
                                summary: 'New JIRA Created from Jenkins.',
                                description: 'New JIRA Created from Jenkins.',
-                               customfield_14418: 'yes',
                                // id or name must present for issueType.
                                issuetype: [name: 'Change']]]
 

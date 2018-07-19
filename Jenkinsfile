@@ -3,7 +3,7 @@ pipeline {
 
     stages {
         stage('JIRA') {
-    		# Look at IssueInput class for more information.
+    		// Look at IssueInput class for more information.
     		def testIssue = [fields: [ // id or key must present for project.
                                	 project: [key: 'GAR'],
                                  summary: 'New JIRA Created from Jenkins.',

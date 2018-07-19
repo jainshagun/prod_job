@@ -3,14 +3,14 @@ pipeline {
 
 node {
   stage('JIRA') {
-    # Look at IssueInput class for more information.
+    // Look at IssueInput class for more information.
     def testIssue = [fields: [ // id or key must present for project.
-                               project: [id: '10000'],
+                               project: [key: 'GAR'],
                                summary: 'New JIRA Created from Jenkins.',
                                description: 'New JIRA Created from Jenkins.',
-                               customfield_1000: 'customValue',
+                               customfield_14418: 'yes',
                                // id or name must present for issueType.
-                               issuetype: [id: '3']]]
+                               issuetype: [name: 'Change']]]
 
     response = jiraNewIssue issue: testIssue
 

@@ -1,9 +1,6 @@
-pipeline {
- agent any
-  stages {
-   stage('JIRA') {
-    def fields = jiraGetFields idOrKey: 'GAR-3'
-    echo fields.data.toString()
-   }
+node {
+  stage('JIRA') {
+    def issue = jiraGetIssue idOrKey: 'GAR-21'
+    echo issue.data.toString()
   }
 }

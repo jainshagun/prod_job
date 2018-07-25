@@ -24,7 +24,7 @@ pipeline {
           if (( env.BRANCH_NAME == 'master' ) || ( env.BRANCH_NAME == 'devops-private')) {
             // Checkout the branch.
             checkout scm
-            jobDsl targets: ['jobs/**/*.groovy', 'views/**/*.groovy'].join('\n')
+            jobDsl targets: ['jobs/**/*.groovy'].join('\n')
           }
           else {
             println "Not on master or devops-private branch doing nothing."

@@ -1,6 +1,8 @@
 node {
   stage('JIRA') {
-    def issue = jiraGetIssue idOrKey: 'GAR-21'
-    echo issue.data.toString()
+    withEnv(['JIRA_SITE=http://jira.sainsbur']) {
+      def fields = jiraGetFields idOrKey: 'GAR-21'
+      echo fields.data.toString()
+    }
   }
 }

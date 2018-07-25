@@ -17,7 +17,7 @@ pipeline {
 
     stage('Build  Jenkins job item') {
       agent {
-        label 'ec2'
+        label 'master'
       }
       steps {
         script {

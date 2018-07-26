@@ -1,6 +1,6 @@
 node {
   stage('JIRA') {
-      def fields = jiraGetFields idOrKey: 'GAR-21'
-      echo fields.data.toString()
+    def issue = jiraGetIssue idOrKey: 'GAR-21'
+    echo issue.data.toString()
   }
 }
